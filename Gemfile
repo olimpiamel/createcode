@@ -59,3 +59,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'devise' #library for user authentication
+
+gem 'bootstrap-sass'  #library for html pages styling
+
+gem 'jquery-rails'  #bootstrap dependency gem

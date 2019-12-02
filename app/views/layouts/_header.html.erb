@@ -3,19 +3,19 @@
     <a href="../landing_page/index" id="logo">CreateCode</a>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <% if false %>
-          <% if creator_signed_in? %>
-            <li class="singlelink"><%= link_to "#" %>Home</li>
-            <li class="singlelink"><%= link_to "#" %>Saved translations</li>
-            <li class="singlelink"><%= link_to "#" %>Translate</li>
-            <li class="singlelink"><%= link_to "#" %>Profile</li>
-            <li class="singlelink"><%= link_to "#" %>Forum</li>
-            <li class="singlelink"><%= link_to "#" %>Sign out</li>
-          <% else %>
-            <li class="singlelink"><%= link_to "#" %>Home</li>
-            <li class="singlelink"><%= link_to "#" %>Sign in</li>
-          <% end %>
+
+        <% if creator_signed_in? %>
+          <li class="singlelink"><%= link_to "Home" %></li>
+          <li class="singlelink"><%= link_to "#" %>Saved translations</li>
+          <li class="singlelink"><%= link_to "#" %>Translate</li>
+          <li class="singlelink"><%= link_to "#" %>Profile</li>
+          <li class="singlelink"><%= link_to "#" %>Forum</li>
+          <li class="singlelink"><%= link_to "Sign out" %>destroy_creator_session_path, method: :delete</li>
+        <% else %>
+          <li class="singlelink"><%= link_to "Log in" %>new_user_session_path</li>
+          <li class="singlelink"><%= link_to "Sign up" %>new_user_registration_path</li>
         <% end %>
+
       </ul>
     </nav>
   </div>

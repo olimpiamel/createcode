@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :creators
   get 'landing_page/index'
 
   root 'landing_page#index'
