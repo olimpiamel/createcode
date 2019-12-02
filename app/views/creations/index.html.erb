@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Creations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Totranslate</th>
+      <th>Translated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @creations.each do |creation| %>
+      <tr>
+        <td><%= creation.totranslate %></td>
+        <td><%= creation.translated %></td>
+        <td><%= link_to 'Show', creation %></td>
+        <td><%= link_to 'Edit', edit_creation_path(creation) %></td>
+        <td><%= link_to 'Destroy', creation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Creation', new_creation_path %>

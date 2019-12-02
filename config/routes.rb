@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :creations
   devise_for :creators
   get 'landing_page/index'
 
