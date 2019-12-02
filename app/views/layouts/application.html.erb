@@ -1,7 +1,8 @@
+<% provide(:title, " ") %>
 <!DOCTYPE html>
-<html>
+<html X-Frame-Options: SAMEORIGIN>
   <head>
-    <title>Createcode</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +11,21 @@
   </head>
 
   <body>
-    <h1>CreateCode</h1>
-    <p>Developers translator!!</p>
+    <%= render 'layouts/header' %>
 
+    <div class="container">
+
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+      <%= yield %>
+
+      <%= render 'layouts/footer' %>
+
+    </div>
   </body>
 </html>

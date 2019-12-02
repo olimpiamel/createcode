@@ -1,17 +1,22 @@
+<% provide(:title, "CreateCode") %>
 <!DOCTYPE html>
-<html>
+<html X-Frame-Options: SAMEORIGIN>
   <head>
-    <title>Createcode</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= yield(:title) %> |</title>
   </head>
-
   <body>
-    <h1>CreateCode</h1>
-    <p>This is the landing page routed</p>
-
+    <div class="center jumbotron">
+      <h1 id="first">CreateCode</h1>
+      <div class="homeText">
+      <h3>Translating made easy!</h3><br /><br />
+      <% if false %>
+        <%= link_to "Sign up!", new_creator_registration_path, class: "btn btn-lg btn-primary" %>
+        <%= link_to "Log in!", new_creator_session_path, class: "btn btn-lg btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="embed-responsive embed-responsive-16by9">
+    <%= image_tag("dictionary.jpeg", alt: "Dictionary image", :size => "1000x600") %>
+  </div>
   </body>
 </html>
