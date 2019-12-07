@@ -1,0 +1,40 @@
+<%= form_with(model: createdtranslation, local: true) do |form| %>
+  <% if createdtranslation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(createdtranslation.errors.count, "error") %> prohibited this creation from being saved:</h2>
+
+      <ul>
+      <% createdtranslation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+  <div class="form-group">
+    <%= form.label :title %><br />
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :language1 %><br />
+    <%= form.text_field :language1 %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :text %><br />
+    <%= form.text_area :totranslate, placeholder: "Enter the text you would like to translate here" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :language2 %><br />
+    <%= form.text_field :language2 %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

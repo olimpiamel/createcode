@@ -1,0 +1,38 @@
+<%= form_with(model: croation, local: true) do |form| %>
+  <% if croation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(croation.errors.count, "error") %> prohibited this creation from being saved:</h2>
+
+      <ul>
+      <% croation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %><br />
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Origin_language %><br />
+    <%= form.text_field :lang1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Text_to_translate %><br />
+    <%= form.text_area :totrans %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Destination_language %><br />
+    <%= form.text_field :lang2 %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

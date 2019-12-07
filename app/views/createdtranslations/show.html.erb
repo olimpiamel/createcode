@@ -1,0 +1,23 @@
+<% provide(:title, " ") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+  <body>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>To translate:</strong>
+      <%= @createdtranslation.totranslate %>
+    </p>
+
+    <p>
+      <strong>Translated:</strong>
+      <%= @createdtranslation.translated %>
+    </p>
+
+
+    <%= link_to 'Back', createdtranslations_path %>
+  </body>
+</html>

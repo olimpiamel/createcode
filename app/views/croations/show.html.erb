@@ -1,0 +1,39 @@
+<% provide(:title, "Creations") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+
+  <body>
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @croation.title %>
+    </p>
+
+    <p>
+      <strong>Language for your text:</strong>
+      <%= @croation.lang1 %>
+    </p>
+
+    <p>
+      <strong>Text to translate:</strong>
+      <%= @croation.totrans %>
+    </p>
+
+    <p>
+      <strong>Language of output:</strong>
+      <%= @croation.lang2 %>
+    </p>
+
+    <p>
+      <strong>Translated text:</strong>
+      <p id= "transcolor"><%= @croation.totrans %>
+    </p>
+
+    <%= link_to 'Back', croations_path %>
+  </body>
+</html>

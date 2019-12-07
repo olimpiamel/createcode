@@ -1,0 +1,15 @@
+<% provide(:title, "Creations") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+
+  <body>
+    <h1>New Creation</h1>
+
+    <%= render 'form', croation: @croation %>
+
+    <%= link_to 'Back', croations_path %>
+  </body>
+</html>

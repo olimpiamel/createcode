@@ -1,0 +1,40 @@
+// Place all the styles related to the croations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/.prop_index{
+.prop_index{
+  padding-left: 20px;
+  padding-right: 10px;
+  text-align: center;
+
+  .indivprop{
+    border: 2px solid #cccc00;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 5px 0 grey;
+
+  }
+
+  :hover {
+    color: #8000ff;
+    background-color: transparent;
+  }
+}
+
+
+.row{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  #buttons{
+    padding-left: 15px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+  }
+}
+
+.field{
+  padding: 10px;
+
+}

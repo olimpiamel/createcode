@@ -63,3 +63,5 @@ gem 'devise' #library for user authentication
 gem 'bootstrap-sass'  #library for html pages styling
 
 gem 'jquery-rails'  #bootstrap dependency gem
+
+#gem 'colatra', :path => '../createcode/colatra'

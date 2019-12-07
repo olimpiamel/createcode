@@ -1,0 +1,16 @@
+<% provide(:title, " ") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+
+  <body>
+    <h1>Editing Creation</h1>
+
+    <h1>Apologies, cretions are not allowed to be changed.
+        Alternatively, you can create a new creation from the link below.</h1>
+
+    <%= link_to 'Back', croations_path %>
+  </body>
+</html>

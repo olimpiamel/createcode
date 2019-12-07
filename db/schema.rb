@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_211829) do
+ActiveRecord::Schema.define(version: 2019_12_07_092647) do
 
-  create_table "creations", force: :cascade do |t|
-    t.string "totranslate"
-    t.string "translated"
+  create_table "createdtranslations", force: :cascade do |t|
+    t.integer "creator_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "totranslate"
+    t.string "translated"
+    t.string "language1"
+    t.string "language2"
+    t.index ["creator_id_id"], name: "index_createdtranslations_on_creator_id_id"
   end
 
   create_table "creators", force: :cascade do |t|
@@ -27,8 +32,29 @@ ActiveRecord::Schema.define(version: 2019_12_02_211829) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "alias"
     t.index ["email"], name: "index_creators_on_email", unique: true
     t.index ["reset_password_token"], name: "index_creators_on_reset_password_token", unique: true
+  end
+
+  create_table "croations", force: :cascade do |t|
+    t.string "title"
+    t.string "lang1"
+    t.text "totrans"
+    t.string "lang2"
+    t.text "translated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "name"
+    t.string "alias"
+    t.string "email"
+    t.string "userid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,0 +1,14 @@
+<% provide(:title, " ") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+  <body>
+    <h1>New Creation</h1>
+
+    <%= render 'form', createdtranslation: @createdtranslation %>
+
+    <%= link_to 'Back', createdtranslations_path %>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<% provide(:title, " ") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+  <body>
+    <p id="notice"><%= notice %></p>
+
+    <h1>The best translation platform!</h1>
+    <div class="row">
+      <div class="spacer"></div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <%= link_to 'Start translating', new_createdtranslation_path, class: "btn btn-sm btn-success" %>
+              <div class="spacer"></div><br />
+              <p class="phrase">Translate your texts in the easiest way!</p>
+              <p class="phrase">Just click on the above button</p>
+              <p class="phrase">All fields of the form are required</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="prop_index">
+
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
